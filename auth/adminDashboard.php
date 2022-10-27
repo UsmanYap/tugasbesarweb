@@ -2,7 +2,7 @@
 include('./auth.php');
 
 if (!$authenticated) {
-    header("Location: ./login.php");
+    header("Location: ../login.php");
 } else {
     if (!$admin) {
         header("Location: ./unauth.php");
