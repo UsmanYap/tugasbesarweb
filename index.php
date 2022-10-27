@@ -14,8 +14,8 @@ include("./utils/koneksi.php");
 <body>
     <div class="login-user">
         <div class="login-user-logo">
-            <!-- <i class="fab fa-binotify"></i> -->
-        <h2>Binotify</h2>
+            <i class="fab fa-binotify"></i>
+            <h2>Binotify</h2>
         </div>
         <div class="login-user__info">
             <p>You must login to next the music </p>
@@ -31,14 +31,17 @@ include("./utils/koneksi.php");
             <!-- End sidebar -->
 
             <!-- Music UI -->
-            <div class="musiccontainer"id="home"><?php include("./pages/homeContent.php"); ?>
+            <div class="musiccontainer"id="home">
+                <?php include("./pages/homeContent.php"); ?>
             </div>
 
-            <div class="musiccontainer hide" id="favorites"><?php if ($authenticated) : ?>
+            <div class="musiccontainer hide" id="favorites">
+                <?php if ($authenticated) : ?>
                     <?php include("./pages/favContent.php"); ?>
                 <?php endif; ?></div>
             </div>
-            <div class="musiccontainer hide" id="singer"> <?php include("./pages/singerContent.php"); ?>
+            <div class="musiccontainer hide" id="singer"> 
+                <?php include("./pages/singerContent.php"); ?>
             </div>
             <!-- end music UI -->
     </div>
