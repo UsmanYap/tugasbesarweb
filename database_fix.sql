@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2022 at 11:07 PM
+-- Generation Time: Oct 27, 2022 at 11:25 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -108,7 +108,9 @@ CREATE TABLE `songs` (
   `Duration` int(11) NOT NULL,
   `filepath` char(255) NOT NULL,
   `imgPath` char(255) NOT NULL,
-  `album_id` int(11) NOT NULL
+  `dateAdded` timestamp NOT NULL DEFAULT current_timestamp(),
+  `album_id` int(11) NOT NULL,
+  `singerID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -170,7 +172,8 @@ ALTER TABLE `singers`
 --
 ALTER TABLE `songs`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `album_id` (`album_id`);
+  ADD KEY `album_id` (`album_id`),
+  ADD KEY `singerID` (`singerID`);
 
 --
 -- Indexes for table `users`
@@ -209,7 +212,8 @@ ALTER TABLE `favourites`
 -- Constraints for table `songs`
 --
 ALTER TABLE `songs`
-  ADD CONSTRAINT `songs_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`);
+  ADD CONSTRAINT `songs_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`album_id`),
+  ADD CONSTRAINT `songs_ibfk_2` FOREIGN KEY (`singerID`) REFERENCES `singers` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
