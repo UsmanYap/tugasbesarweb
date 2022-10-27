@@ -39,6 +39,10 @@ include("./utils/koneksi.php");
                 <?php if ($authenticated) : ?>
                     <?php include("./pages/favContent.php"); ?>
                 <?php endif; ?></div>
+                
+            <div class="musicContainer hide" id="search">
+                <?php include("./pages/searchContent.php"); ?>
+            </div>
             </div>
             <div class="musiccontainer hide" id="singer"> 
                 <?php include("./pages/singerContent.php"); ?>
