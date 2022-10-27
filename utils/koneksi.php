@@ -2,7 +2,7 @@
 $server = "localhost";
 $user = "root";
 $password ="";
-$nama_database = "tubesweb";
+$nama_database = "myspotify";
 
 $conn = mysqli_connect($server, $user, $password,$nama_database);
 if (!$conn){
