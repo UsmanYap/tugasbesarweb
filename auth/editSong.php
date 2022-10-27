@@ -45,6 +45,18 @@ $songs = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <th colspan="3">Operations</th>
             </tr>
 
+            <?php foreach ($songs as $index => $song) : if ($index == 5) break; ?>
+                <tr>
+                    <td><?php echo $index + 1; ?></td>
+                    <td><img style="width: 50px; height: 50px;" src="<?php echo '../' . $song['imgPath'] ?>"></td>
+                    <td><?php echo $song['title']; ?></td>
+                    <td><?php echo $song['filePath']; ?></td>
+                    <td><a style="padding: 5px; background-color: #66FF33; color: #fff; border-radius: 15px; text-decoration: none;" href="insertSong.php?id=<?php echo $song['id'] ?>">Update</a></td>
+                    <td><a style="padding: 5px; background-color: #E3242B; color: #fff; border-radius: 15px; text-decoration: none;" href="deleteSong.php?id=<?php echo $song['id'] ?>">Delete</a></td>
+                </tr>
+
+            <?php endforeach; ?>
+
             
 
          
