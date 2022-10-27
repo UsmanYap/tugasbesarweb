@@ -186,6 +186,8 @@ body {
   input[type="checkbox"] {
     position: relative;
     -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
     background: #c6c6c6;
     width: 50px;
     outline: none;
