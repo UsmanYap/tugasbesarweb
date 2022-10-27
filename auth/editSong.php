@@ -56,7 +56,15 @@ $songs = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 </tr>
 
             <?php endforeach; ?>
-
+            </table>
+            <div class="c3"><a href=insertSong.php>INSERT SONG</a></div>
+            <div class="paginationButton">
+            <ul style="display: flex; list-style-type: none; color: black; margin: 0 auto; justify-content: center;">
+                <li onclick="pagination(this.value);" style="padding: 10px;" value="1"> 1</li>
+                <li onclick="pagination(this.value);" style="padding: 10px;" value="2"> 2</li>
+                <li onclick="pagination(this.value);" style="padding: 10px;" value="3"> 3</li>
+            </ul>
+        </div>
             
 
          
