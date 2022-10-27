@@ -23,7 +23,14 @@ include'koneksi.php';
             <a href="signup.php"class="sign up">Miku : 'Haven't create an account yet?'</a>
             <div class="close">+</div>
         </div>
-
+    </div>
+    <div class="container">
+        <div class="content">
+            <!-- sidebar -->
+            <?php include("./components/sidebar.php"); ?>
+            <!-- end sidebar -->
+        </div>
+    </div>
     
     
 </body>
