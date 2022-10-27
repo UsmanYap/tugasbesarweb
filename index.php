@@ -28,10 +28,22 @@ include'koneksi.php';
         <div class="content">
             <!-- sidebar -->
             <?php include("./components/sidebar.php"); ?>
-            <!-- end sidebar -->
-        </div>
+            <!-- End sidebar -->
+
+            <!-- Music UI -->
+            <div class="musiccontainer"id="home"><?php include("./pages/homeContent.php"); ?>
+            </div>
+
+            <div class="musiccontainer hide" id="favorites"><?php if ($authenticated) : ?>
+                    <?php include("./pages/favContent.php"); ?>
+                <?php endif; ?></div>
+            </div>
+            <div class="musiccontainer hide" id="singer"> <?php include("./pages/singerContent.php"); ?>
+            </div>
+            <!-- end music UI -->
     </div>
-    
+    <!-- Music player -->
+    <?php include("./components/musicPlayer.php"); ?>
     
 </body>
 </html>
