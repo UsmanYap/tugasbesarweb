@@ -17,7 +17,7 @@
                     <li><a href="./auth/adminDashboard.php">Admin Dashboard</a></li>
                 <?php endif; ?>
             <?php else : ?>
-                <li><a href="./auth/login.php">Login</a></li>
+                <li><a href="../login.php">Login</a></li>
             <?php endif; ?>
         </ul>
     </div>
