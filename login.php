@@ -1,5 +1,5 @@
 <?php
-include("koneksi.php");
+include("./utils/koneksi.php");
 session_start();
 if (isset($_SESSION['id'])) {
     header("Location: index.php");
