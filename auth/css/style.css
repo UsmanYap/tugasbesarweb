@@ -1,0 +1,66 @@
+/* Login user*/
+.login-user {
+    position: absolute;
+    width: 50%;
+    height: 50vh;
+    border-radius: 5px;
+    background: rgb(40, 38, 38);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    transition: all .5s ease-in-out;
+}
+
+.login-user.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
+.login-user__logo,
+.login-user__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-user__info {
+    position: relative;
+}
+
+.login-user__logo i {
+    font-size: 150px;
+    color: #1DB954;
+    margin: 20px 0;
+}
+
+.login-user__info .login {
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    background-color: #1DB954;
+}
+
+.login-user__info .signup {
+    color: white;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.login-user .close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    font-size: 30px;
+    transform: rotate(45deg);
+}
