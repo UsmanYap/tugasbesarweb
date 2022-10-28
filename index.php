@@ -18,7 +18,7 @@ include("./utils/koneksi.php");
             <h2>Binotify</h2>
         </div>
         <div class="login-user__info">
-            <p>You must login to next the music </p>
+            <p>You must login to next the music :( </p>
             <a href="login.php" class="login">Login</a>
             <a href="signup.php"class="sign up">Miku : 'Haven't create an account yet?'</a>
             <div class="close">+</div>

@@ -9,4 +9,3 @@ if (isset($_SESSION['id'])){
     $admin = $_SESSION['name'];
     $authenticated = true;
 }
-adfgdfggfd
